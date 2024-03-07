@@ -1,0 +1,270 @@
+/* Main CSS */
+:root{
+    --pink:#FAEFE6;
+    --purple:#D46BCA;
+    --orange:#FD883D;
+    --darkpurple:#553566;
+}
+@font-face{
+    font-family: myfont;
+    src:url('Hagrid-Regular-trial.ttf')
+}
+@font-face{
+    font-family: myheader;
+    src:url('Hagrid-Text-Extrabold-trial.ttf')
+}
+body {
+    background-image: url("https://i.pinimg.com/564x/2e/2d/16/2e2d1649a23db39546df093189de6a35.jpg");
+     font-family: myfont;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#container h1 img{
+     width: 150px;
+     position: relative;
+     top: 20px;
+     padding-right: 20px;
+}
+#container h1{
+    font-family: myheader;
+    color: var(--purple);
+    font-size: 40px;
+}
+
+#container {
+    background-color : var(--pink);
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 1100px;
+    height: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+   
+   
+}
+
+#list-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    margin-left: 60px;
+}
+
+
+#addNoteDiv p{
+    font-size: 20px;
+    padding: 10px;
+    font-family: myfont;
+    color: var(--darkpurple);
+}
+#addNoteDiv {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+
+    border-radius: 8px;
+    height: 50px;
+    width:100vh;
+    margin: 10px;
+    margin-left: 230px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv:hover {
+    transition: 0.25s;
+    background-color: #F29D4D;
+    text-shadow: 2px 1px white;
+}
+
+#popupContainer h1{
+    font-family: myheader;
+    color: var(--purple);
+    font-size: 40px;
+}
+#addNoteDiv i {
+    font-size: 70px;
+    color: gainsboro;
+}
+
+#list-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    /* background-color: #fff385; */
+    /* background-image: url("https://i.pinimg.com/564x/71/c8/56/71c8564bb840621d5a3c8d657cf5533b.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/80/59/3f/80593fd5b3eac447d41f1b4f4090bd96.jpg"); */
+    background-image: url("https://i.pinimg.com/564x/62/f4/18/62f418fa4e5a13a26606e0c92d94f0cc.jpg");
+    font-family: cursive;
+    color:black;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin: 5px 0;
+    padding: 37px;
+    border-radius: 10px; /*  corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Added to align buttons to the right */
+    height:300px;
+    width: 400px;
+    margin: 20px;
+    /*for words without spaces written*/
+    .wrap {
+        overflow-wrap: break-word;
+      }
+    border-radius: 10px;
+    box-shadow:  9px 9px 18px #b3b3b3,
+             -9px -9px 18px #ffffff;
+
+}
+
+li span {
+    font-size: 25px;
+    /* flex-grow: 1; */
+    word-wrap: break-word;
+    overflow-y: scroll;
+    width: 100%;
+    padding:20px;
+    text-align: center;
+}
+
+#editBtn,
+#deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px; 
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+#editBtn {
+    background-color:#FFB6C1;
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: gray;
+}
+
+
+/* Create Note Popup CSS */
+#popupContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height:400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+textarea {
+    width: 350px;
+    height: 250px;
+    margin: 10px ;
+    padding: 10px;
+    font-size: 25px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+    
+}
+
+#btn-container {
+    display: flex;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#closeBtn {
+    background-color: gainsboro;
+}
+
+
+/* Editing Popup CSS */
+#editing-container {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border: 1px solid #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding:  5px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#closeBtn {
+    background-color:#FFB6C1 ;
+}
